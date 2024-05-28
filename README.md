@@ -8,7 +8,12 @@ run "playwright install"
 
 ## ToDo's
 
-https://prankshit.com/fake-whatsapp-chat-generator.php
+- https://prankshit.com/fake-whatsapp-chat-generator.php
+- Mehr Daten Sammeln
+- Dataset auf GitHub hochladen
+- Seed setzen
+- Modell speichern
+- UI für fine tuning
 
 ## Data source
 
