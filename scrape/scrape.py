@@ -1,8 +1,5 @@
-import time
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
-import csv
 import uuid
-import sys
 from pathlib import Path
 import os
 import glob
@@ -59,7 +56,6 @@ def start_scraping_whatsapp():
     mobile_device = 'iPhone X'
 
     def run(playwright):
-        failures = 0
         browser = playwright.chromium.launch(headless=True)
         device = playwright.devices[mobile_device]
         #context = browser.new_context(**device)
@@ -83,8 +79,8 @@ def start_scraping_whatsapp():
 
                     original_path = download.path()
                     
-                    unique_id = uuid.uuid4()  # Generate a unique identifier
-                    file_name = f"{unique_id}.png"  # Use UUID to form a new file name
+                    unique_id = uuid.uuid4()
+                    file_name = f"{unique_id}.png"
                     
                     new_path = os.path.join(download_path, file_name)
                     os.rename(original_path, new_path)
