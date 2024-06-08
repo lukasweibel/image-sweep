@@ -21,7 +21,7 @@ def classifyPicture():
 
     if file:
         predicted_class = predict_class(file)
-        return jsonify({"message": "The file is classified as: " + predicted_class}), 200
+        return jsonify({"message": predicted_class}), 200
 
     return jsonify({"error": "File upload failed"}), 500
 

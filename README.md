@@ -9,9 +9,9 @@ The application addresses two main problems:
 
 ## Project Setup
 
-create python environment with the version 3.11.4. In this step also download all dependencies from the requirements.txt
+Create python environment with the version 3.11.4. In this step also download all dependencies from the requirements.txt
 
-If you want to run also the webscraper:
+If you want to run also the web scraper, type the following command in the terminal:
 
 ```
 playwright install
@@ -25,7 +25,7 @@ Class 1: General Photos
 For the first class, I used approximately 510 random pictures from the following Kaggle dataset: https://www.kaggle.com/datasets/pankajkumar2002/random-image-sample-dataset
 
 Class 2: Screenshots
-For the second class, I generated random screenshots from websites using Playwright as a web scraper. The script scrape/scrape.py visits all websites listed in the scrape/websites.txt file using a Chrome Desktop Browser and saves screenshots of each. Subsequently, the same websites are visited again using an iPhone X Browser, and screenshots are taken and saved. Finally, the script visits a website that creates fake WhatsApp chats and captures screenshots of the generated chats. Like this I am ending upt with around 310 screenshots.
+For the second class, I generated random screenshots from websites using Playwright as a web scraper. The script scrape/scrape.py visits all websites listed in the scrape/websites.txt file using a Chrome Desktop Browser and saves screenshots of each. Subsequently, the same websites are visited again using an iPhone X Browser, and screenshots are taken and saved. Finally, the script visits a website that creates fake WhatsApp chats and captures screenshots of the generated chats. As a result, I am ending up with around 310 screenshots.
 
 run script:
 
@@ -81,7 +81,15 @@ A proof of concept for this mechanism is implemented in the `merge.ipynb` notebo
 
 ## Web Application
 
-The application can be started with the start.sh script. Therefor just run the command ./start.sh in the terminal. The start.sh script will source the virtual environment (if the virtual environment is set up with venv in a .venv folder), build the svelte frontend and the start the flask app.
+The idea of the web application is a simple file upload which will classify the uploaded pictures into screenshots and others. After the classification, there is a button to download all pictures classified as others as a ZIP folder.
+
+The application can be started with the start.sh script. To do this, run the following command in the terminal:
+
+```
+./start.sh
+```
+
+The start.sh script will source the virtual environment (if the virtual environment is set up with venv in a .venv folder), build the Svelte frontend, and start the Flask app. Maybe you have to change the ./start.sh script to your specific environment.
 
 ## Any further Questions?
 
