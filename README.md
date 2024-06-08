@@ -9,9 +9,13 @@ The application addresses two main problems:
 
 ## Project Setup
 
-create python environment with the version 3.11.4
+create python environment with the version 3.11.4. In this step also download all dependencies from the requirements.txt
 
-run "playwright install"
+If you want to run also the webscraper:
+
+```
+playwright install
+```
 
 ## Data Generation and Collection
 
@@ -64,7 +68,7 @@ The idea is to implement a feedback loop where users provide feedback on specifi
 
 **Cons:**
 
-- **Privacy Concerns:** Users' private data must be sent to the server, raising potential privacy issues.
+- **Privacy Concerns:** Users private data must be sent to the server, raising potential privacy issues.
 - **Increased Costs:** Maintaining and scaling server infrastructure can be costly.
 
 ### Proposed Solution
@@ -75,15 +79,10 @@ While the idea of running the model on the device is appealing due to privacy an
 
 A proof of concept for this mechanism is implemented in the `merge.ipynb` notebook, demonstrating the feasibility of merging multiple fine-tuned models into one new base model.
 
-## Application
+## Web Application
 
 The application can be started with the start.sh script. Therefor just run the command ./start.sh in the terminal. The start.sh script will source the virtual environment (if the virtual environment is set up with venv in a .venv folder), build the svelte frontend and the start the flask app.
 
-## ToDo's
+## Any further Questions?
 
-- https://prankshit.com/fake-whatsapp-chat-generator.php
-- Mehr Daten Sammeln
-- Kommentare herausnehmen
-- Kommentieren
-- Dokumentieren
-- pip freeze
+Please contact me: weibelu1@students.zhaw.ch
